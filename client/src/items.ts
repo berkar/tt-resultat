@@ -4,18 +4,18 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-const BASE_URL = 'http://localhost:3000/resultat';
+const BASE_URL = 'http://localhost:8080/cma/rest/resultatlista';
 const HEADER = {headers: new Headers({'Content-Type': 'application/json'})};
 
 export interface Item {
     id: number;
-    resultTotal: number;
-    resultClazz: number;
-    resultGender: number;
+    placeringTotal: number;
+    placeringClazz: number;
+    placeringGender: number;
     name: string;
     clazz: string;
     gender: string;
-    resultTime: string;
+    totaltime: string;
     medalj: string;
 }
 

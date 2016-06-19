@@ -41,7 +41,7 @@
 <table class="resultlist mdl-data-table mdl-js-data-table">
     <thead>
     <tr>
-        <th class="placering mdl-data-table__cell--non-numeric">Totalt - Klass - Kön</th>
+        <th class="placering mdl-data-table__cell--non-numeric">Totalt - Klass - Genus</th>
         <th class="mdl-data-table__cell--non-numeric">Namn</th>
         <th class="clazz">Klass</th>
         <th class="gender">Genus</th>
@@ -51,7 +51,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let item of items | PlaceringSort | NamePipe:name | ClazzPipe:clazz | GenderPipe:gender">
-        <td class="mdl-data-table__cell--non-numeric">{{item.resultTotal}} - {{item.resultClazz}} - {{item.resultGender}}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{item.placeringTotal}} - {{item.placeringClazz}} - {{item.placeringGender}}</td>
         <td class="mdl-data-table__cell--non-numeric">{{item.name}}</td>
         <td>
             <div class="icon">
@@ -67,7 +67,7 @@
                 <img *ngIf="item.gender!='herrar' && item.gender!='damer'" src="assets/img/Sex-Male-Female-Circled-icon.png">
             </div>
         </td>
-        <td>{{item.resultTime}}</td>
+        <td>{{item.totaltime}}</td>
         <td>
             <div id="medalj" class="icon">
                 <img id="gold" *ngIf="item.medalj=='gold'" src="assets/img/medal-gold-2-icon.png">
