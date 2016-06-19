@@ -1,0 +1,80 @@
+<div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="name">Namn</label>
+    <input class="mdl-textfield__input" type="text" id="name" [(ngModel)]="name"/>
+</div>
+<div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="clazz">Tävlingsklass [elit | motion]</label>
+    <input class="mdl-textfield__input" type="text" id="clazz" [(ngModel)]="clazz"/>
+</div>
+<div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="gender">Kön [herrar | damer]</label>
+    <input class="mdl-textfield__input" type="text" id="gender" [(ngModel)]="gender"/>
+</div>
+<button (click)="print()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+    Skriv ut
+</button>
+<style>
+    .resultlist {
+        width: 100%;
+    }
+
+    .placering {
+        width: 20px;
+    }
+
+    .clazz {
+        width: 10px;
+    }
+
+    .gender {
+        width: 10px;
+    }
+
+    .sluttid {
+        width: 10px;
+    }
+
+    .medalj {
+        width: 10px;
+    }
+</style>
+<table class="resultlist mdl-data-table mdl-js-data-table">
+    <thead>
+    <tr>
+        <th class="placering mdl-data-table__cell--non-numeric">Totalt - Klass - Kön</th>
+        <th class="mdl-data-table__cell--non-numeric">Namn</th>
+        <th class="clazz">Klass</th>
+        <th class="gender">Genus</th>
+        <th class="sluttid">Tid</th>
+        <th class="medalj">Medalj</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of items | PlaceringSort | NamePipe:name | ClazzPipe:clazz | GenderPipe:gender">
+        <td class="mdl-data-table__cell--non-numeric">{{item.resultTotal}} - {{item.resultClazz}} - {{item.resultGender}}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{item.name}}</td>
+        <td>
+            <div class="icon">
+                <img *ngIf="item.clazz=='elit'" src="assets/img/Letter-E-icon.png">
+                <img *ngIf="item.clazz=='motion'" src="assets/img/Letter-M-icon.png">
+                <img *ngIf="item.clazz!='elit' && item.clazz!='motion'" src="assets/img/Letter-X-icon.png">
+            </div>
+        </td>
+        <td>
+            <div class="icon">
+                <img *ngIf="item.gender=='herrar'" src="assets/img/spider-man-icon.png">
+                <img *ngIf="item.gender=='damer'" src="assets/img/catwoman-girl-icon.png">
+                <img *ngIf="item.gender!='herrar' && item.gender!='damer'" src="assets/img/Sex-Male-Female-Circled-icon.png">
+            </div>
+        </td>
+        <td>{{item.resultTime}}</td>
+        <td>
+            <div id="medalj" class="icon">
+                <img id="gold" *ngIf="item.medalj=='gold'" src="assets/img/medal-gold-2-icon.png">
+                <img id="silver" *ngIf="item.medalj=='silver'" src="assets/img/medal-silver-1-icon.png">
+                <img id="bronze" *ngIf="item.medalj=='bronze'" src="assets/img/medal-bronze-3-icon.png">
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>

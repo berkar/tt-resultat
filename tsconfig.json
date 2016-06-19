@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ],
+  "filesGlob": [
+    "typings/index.d.ts",
+    "client/**/*.ts"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "files": [
+    "typings/index.d.ts",
+    "client/bootstrap.ts",
+    "client/src/app.ts",
+    "client/src/items.spec.ts",
+    "client/src/items.ts",
+    "client/vendor.ts"
+  ]
+}

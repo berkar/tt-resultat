@@ -1,0 +1,68 @@
+{
+  "foranmald": [
+    {
+      "id": 1,
+      "name": "Jane Fonda"
+    },
+    {
+      "id": 2,
+      "name": "Clint Eastwood"
+    },
+    {
+      "id": 3,
+      "name": "Kicki"
+    },
+    {
+      "id": 6,
+      "name": "Tarzan"
+    }
+  ],
+  "start": [
+  ],
+  "resultat": [
+    {
+      "id": 1,
+      "resultTotal": "1",
+      "resultClazz": "1",
+      "resultGender": "1",
+      "name": "Jane Fonda",
+      "clazz": "elit",
+      "gender": "damer",
+      "resultTime": "57:00",
+      "medalj": "gold"
+    },
+    {
+      "resultTotal": "3",
+      "resultClazz": "2",
+      "resultGender": "1",
+      "id": 2,
+      "name": "Clint Eastwood",
+      "clazz": "elit",
+      "gender": "herrar",
+      "resultTime": "59:35",
+      "medalj": "gold"
+    },
+    {
+      "resultTotal": "2",
+      "resultClazz": "1",
+      "resultGender": "2",
+      "id": 3,
+      "name": "Kicki",
+      "clazz": "motion",
+      "gender": "damer",
+      "resultTime": "58:00",
+      "medalj": "silver"
+    },
+    {
+      "resultTotal": "4",
+      "resultClazz": "2",
+      "resultGender": "2",
+      "id": 6,
+      "name": "Tarzan",
+      "clazz": "motion",
+      "gender": "herrar",
+      "resultTime": "1:06:00",
+      "medalj": "bronze"
+    }
+  ]
+}
