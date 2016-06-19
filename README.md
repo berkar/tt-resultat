@@ -1,4 +1,4 @@
-# Reactive RESTful Angular 2 application with ngrx store
+# GUI component for Tuffa timmen - Results
 
 A RESTful master-detail application built using Angular 2 and [ngrx store](https://github.com/ngrx/store).
 
@@ -13,8 +13,8 @@ To get started, run the commands below.
 
 ```
 # Download the code
-$ git clone https://github.com/simpulton/ngrx-rest-app.git
-$ cd ngrx-rest-app
+$ git clone https://github.com/berkar/tt-resultat.git
+$ cd tt-resultat
 
 # Install dependencies
 $ npm i
@@ -25,7 +25,6 @@ $ typings install
 # Build the app
 $ npm start
 ```
-
 Then navigate to [http://localhost:3001](http://localhost:3001) in your browser.
 
 # Download icons
